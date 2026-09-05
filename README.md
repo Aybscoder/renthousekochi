@@ -1,4 +1,4 @@
-# Rent Home Hub
+# Rent House Kochi
 
 Make a user friendly and mobile friendly website for the Rent house https://maps.app.goo.gl/LrrM3Kz8hAumjjYY7?g_st=ac , single page fast loading modern style website with menu with about , contact, location , gallery, and a contact form too , that contact form collect data of name , mobile number, and room preference like 2 share, 3 share, 4 share(options) those data send to whatsapp of rent house admin and get those exact form data like hi, i want to know availability of ....My name , contact , my requirement like that or some thing that kind but it would be a use ful data to rent house admin ,
 
