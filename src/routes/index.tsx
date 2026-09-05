@@ -216,7 +216,7 @@ function Index() {
           </div>
           <a
             href="#contact"
-            className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-brand py-4 text-base font-semibold text-primary-foreground shadow-[0_14px_30px_-10px_rgba(124,109,242,.9)]"
+            className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-brand py-4 text-base font-semibold text-primary-foreground shadow-[0_14px_30px_-10px_rgba(124,109,242,.9)] transition-all duration-200 hover:shadow-[0_20px_38px_-10px_rgba(124,109,242,1)]"
           >
             Check availability →
           </a>
@@ -370,12 +370,12 @@ function Index() {
             {error && <p className="text-sm font-semibold text-destructive">{error}</p>}
             <button
               type="submit"
-              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-accent-teal py-4 text-base font-semibold text-primary-foreground shadow-[0_14px_30px_-10px_rgba(20,184,166,.9)]"
+              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-accent-teal py-4 text-base font-semibold text-primary-foreground shadow-[0_14px_30px_-10px_rgba(20,184,166,.9)] transition-all duration-200 hover:shadow-[0_20px_38px_-10px_rgba(20,184,166,1)]"
             >
               <MessageCircle className="size-5" /> Enquire Now
             </button>
             <p className="text-center text-[12px] font-medium text-soft">
-              A peaceful stay is just one message away 🌿
+              More than a bed. A space to breathe.
             </p>
           </form>
         </section>
