@@ -174,6 +174,7 @@ function Index() {
           >
             {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
+          </div>
         </header>
 
         {/* Mobile menu */}
