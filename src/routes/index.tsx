@@ -372,10 +372,10 @@ function Index() {
               type="submit"
               className="flex w-full items-center justify-center gap-2 rounded-2xl bg-accent-teal py-4 text-base font-semibold text-primary-foreground shadow-[0_14px_30px_-10px_rgba(20,184,166,.9)]"
             >
-              <MessageCircle className="size-5" /> Send on WhatsApp
+              <MessageCircle className="size-5" /> Enquire Now
             </button>
-            <p className="text-center text-[11px] text-soft">
-              Your message opens in WhatsApp, ready to send to the admin 🌿
+            <p className="text-center text-[12px] font-medium text-soft">
+              A peaceful stay is just one message away 🌿
             </p>
           </form>
         </section>
@@ -406,6 +406,18 @@ function Index() {
           </div>
         </footer>
       </div>
+
+      {/* Back to top */}
+      <button
+        type="button"
+        aria-label="Back to top"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className={`fixed bottom-5 right-5 z-40 grid size-11 place-items-center rounded-full bg-brand text-primary-foreground shadow-[0_14px_30px_-10px_rgba(124,109,242,.9)] transition-all duration-300 ${
+          showTop ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
+        }`}
+      >
+        <ArrowUp className="size-5" />
+      </button>
     </div>
   );
 }
