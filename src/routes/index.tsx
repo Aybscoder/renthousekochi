@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Menu,
   X,
@@ -10,6 +10,9 @@ import {
   UtensilsCrossed,
   Sparkles,
   ShieldCheck,
+  Moon,
+  Sun,
+  ArrowUp,
 } from "lucide-react";
 
 import roomImg from "@/assets/room.jpg";
@@ -68,6 +71,26 @@ function Index() {
   const [mobile, setMobile] = useState("");
   const [room, setRoom] = useState("3 Share");
   const [error, setError] = useState("");
+  const [dark, setDark] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      (localStorage.getItem("rent-house-theme") === "dark" ||
+        (!localStorage.getItem("rent-house-theme") &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)),
+  );
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", dark);
+    localStorage.setItem("rent-house-theme", dark ? "dark" : "light");
+  }, [dark]);
+
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 400);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const sendToWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
@@ -134,6 +157,15 @@ function Index() {
               Enquire
             </a>
           </nav>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+              onClick={() => setDark((v) => !v)}
+              className="grid size-10 place-items-center rounded-xl bg-surface/70 text-ink outline outline-ink/5"
+            >
+              {dark ? <Sun className="size-5" /> : <Moon className="size-5" />}
+            </button>
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
