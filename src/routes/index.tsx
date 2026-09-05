@@ -107,9 +107,9 @@ function Index() {
 
       <div className="relative mx-auto max-w-[420px] px-5 pb-16 pt-6 md:max-w-3xl">
         {/* Header */}
-        <header className="sticky top-3 z-40 flex items-center justify-between rounded-2xl bg-white/70 px-4 py-3 shadow-[0_12px_30px_-16px_rgba(124,109,242,.6)] outline outline-black/5 backdrop-blur-xl">
+        <header className="sticky top-3 z-40 flex items-center justify-between rounded-2xl bg-surface/70 px-4 py-3 shadow-[0_12px_30px_-16px_rgba(124,109,242,.6)] outline outline-ink/5 backdrop-blur-xl">
           <a href="#top" className="flex items-center gap-2">
-            <div className="grid size-10 place-items-center rounded-2xl bg-white/80 text-brand shadow-[0_8px_20px_-8px_rgba(124,109,242,.6)] outline outline-black/5">
+            <div className="grid size-10 place-items-center rounded-2xl bg-surface/80 text-brand shadow-[0_8px_20px_-8px_rgba(124,109,242,.6)] outline outline-ink/5">
               <span className="font-display text-lg font-bold">R</span>
             </div>
             <div>
@@ -122,7 +122,7 @@ function Index() {
               <a
                 key={l.href}
                 href={l.href}
-                className="rounded-full px-3 py-2 text-sm font-semibold text-soft transition hover:bg-white/70 hover:text-ink"
+                className="rounded-full px-3 py-2 text-sm font-semibold text-soft transition hover:bg-surface/70 hover:text-ink"
               >
                 {l.label}
               </a>
@@ -138,7 +138,7 @@ function Index() {
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             onClick={() => setMenuOpen((v) => !v)}
-            className="grid size-10 place-items-center rounded-xl bg-white/70 text-ink outline outline-black/5 md:hidden"
+            className="grid size-10 place-items-center rounded-xl bg-surface/70 text-ink outline outline-ink/5 md:hidden"
           >
             {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -146,7 +146,7 @@ function Index() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="fixed inset-x-5 top-24 z-40 rounded-2xl bg-white/90 p-3 shadow-[0_24px_60px_-24px_rgba(43,37,64,.5)] outline outline-black/5 backdrop-blur-xl md:hidden">
+          <div className="fixed inset-x-5 top-24 z-40 rounded-2xl bg-surface/90 p-3 shadow-[0_24px_60px_-24px_rgba(43,37,64,.5)] outline outline-ink/5 backdrop-blur-xl md:hidden">
             {NAV_LINKS.map((l) => (
               <a
                 key={l.href}
@@ -161,7 +161,7 @@ function Index() {
         )}
 
         {/* Hero */}
-        <section className="mt-8 rounded-[32px] bg-white/60 p-6 shadow-[0_24px_60px_-24px_rgba(124,109,242,.5)] outline outline-black/5 backdrop-blur-xl">
+        <section className="mt-8 rounded-[32px] bg-surface/60 p-6 shadow-[0_24px_60px_-24px_rgba(124,109,242,.5)] outline outline-ink/5 backdrop-blur-xl">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-teal/15 px-3 py-1 text-xs font-semibold text-accent-teal">
             ● Rooms available now
           </span>
@@ -176,7 +176,7 @@ function Index() {
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {["2 Share", "3 Share", "4 Share"].map((t) => (
-              <span key={t} className="rounded-full bg-white/80 px-3 py-1.5 font-display text-xs font-semibold">
+              <span key={t} className="rounded-full bg-surface/80 px-3 py-1.5 font-display text-xs font-semibold">
                 {t}
               </span>
             ))}
@@ -192,7 +192,7 @@ function Index() {
         {/* About */}
         <section
           id="about"
-          className="mt-5 scroll-mt-24 rounded-[28px] bg-white/55 p-5 shadow-[0_18px_44px_-24px_rgba(43,37,64,.5)] outline outline-black/5 backdrop-blur-xl"
+          className="mt-5 scroll-mt-24 rounded-[28px] bg-surface/55 p-5 shadow-[0_18px_44px_-24px_rgba(43,37,64,.5)] outline outline-ink/5 backdrop-blur-xl"
         >
           <div className="flex items-center justify-between">
             <h2 className="font-display text-lg font-semibold">About Rent House</h2>
@@ -218,7 +218,7 @@ function Index() {
           </div>
           <div className="mt-4 grid grid-cols-2 gap-2">
             {AMENITIES.map(({ icon: Icon, label, desc }) => (
-              <div key={label} className="rounded-2xl bg-white/70 p-3 outline outline-black/5">
+              <div key={label} className="rounded-2xl bg-surface/70 p-3 outline outline-ink/5">
                 <Icon className="size-4 text-brand" />
                 <p className="mt-2 text-sm font-semibold">{label}</p>
                 <p className="text-[12px] text-soft">{desc}</p>
@@ -239,7 +239,7 @@ function Index() {
                 width={1024}
                 height={1024}
                 loading="lazy"
-                className="aspect-square rounded-3xl object-cover outline-1 -outline-offset-1 outline-black/5"
+                className="aspect-square rounded-3xl object-cover outline-1 -outline-offset-1 outline-ink/5"
               />
             ))}
           </div>
@@ -248,7 +248,7 @@ function Index() {
         {/* Location */}
         <section
           id="location"
-          className="mt-5 scroll-mt-24 rounded-[28px] bg-white/55 p-5 shadow-[0_18px_44px_-24px_rgba(43,37,64,.5)] outline outline-black/5 backdrop-blur-xl"
+          className="mt-5 scroll-mt-24 rounded-[28px] bg-surface/55 p-5 shadow-[0_18px_44px_-24px_rgba(43,37,64,.5)] outline outline-ink/5 backdrop-blur-xl"
         >
           <h2 className="font-display text-lg font-semibold">Location</h2>
           <p className="mt-1 text-[14px] text-soft">
@@ -276,7 +276,7 @@ function Index() {
         {/* Contact form */}
         <section
           id="contact"
-          className="mt-5 scroll-mt-24 rounded-[28px] bg-white/60 p-6 shadow-[0_24px_60px_-24px_rgba(124,109,242,.5)] outline outline-black/5 backdrop-blur-xl"
+          className="mt-5 scroll-mt-24 rounded-[28px] bg-surface/60 p-6 shadow-[0_24px_60px_-24px_rgba(124,109,242,.5)] outline outline-ink/5 backdrop-blur-xl"
         >
           <h2 className="font-display text-xl font-semibold">Reserve your room</h2>
           <p className="mt-1 text-[14px] text-soft">
@@ -295,7 +295,7 @@ function Index() {
                 onChange={(e) => setName(e.target.value)}
                 maxLength={100}
                 placeholder="e.g. Aarav Shah"
-                className="w-full rounded-2xl border border-black/5 bg-white/80 px-4 py-3.5 text-[15px] outline-none placeholder:text-soft/60 focus:border-brand focus:ring-2 focus:ring-brand/30"
+                className="w-full rounded-2xl border border-ink/5 bg-surface/80 px-4 py-3.5 text-[15px] outline-none placeholder:text-soft/60 focus:border-brand focus:ring-2 focus:ring-brand/30"
               />
             </div>
             <div>
@@ -310,7 +310,7 @@ function Index() {
                 onChange={(e) => setMobile(e.target.value)}
                 maxLength={15}
                 placeholder="+91 98765 43210"
-                className="w-full rounded-2xl border border-black/5 bg-white/80 px-4 py-3.5 text-[15px] outline-none placeholder:text-soft/60 focus:border-brand focus:ring-2 focus:ring-brand/30"
+                className="w-full rounded-2xl border border-ink/5 bg-surface/80 px-4 py-3.5 text-[15px] outline-none placeholder:text-soft/60 focus:border-brand focus:ring-2 focus:ring-brand/30"
               />
             </div>
             <div>
@@ -326,7 +326,7 @@ function Index() {
                     className={`rounded-2xl border py-3.5 text-center text-sm font-semibold transition ${
                       room === opt
                         ? "border-brand bg-brand text-primary-foreground shadow-[0_10px_22px_-8px_rgba(124,109,242,.9)]"
-                        : "border-black/5 bg-white/70 text-soft"
+                        : "border-ink/5 bg-surface/70 text-soft"
                     }`}
                   >
                     {opt}
@@ -354,7 +354,7 @@ function Index() {
             <a
               href={`tel:+${WHATSAPP_NUMBER}`}
               aria-label="Call the hostel"
-              className="grid size-9 place-items-center rounded-full bg-white/70 text-ink outline outline-black/5"
+              className="grid size-9 place-items-center rounded-full bg-surface/70 text-ink outline outline-ink/5"
             >
               <Phone className="size-4" />
             </a>
