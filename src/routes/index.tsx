@@ -13,6 +13,11 @@ import {
   Moon,
   Sun,
   ArrowUp,
+  WashingMachine,
+  Lock,
+  HandPlatter,
+  IndianRupee,
+  CalendarClock,
 } from "lucide-react";
 
 import roomImg from "@/assets/room.jpg";
@@ -31,10 +36,13 @@ const NAV_LINKS = [
 ];
 
 const AMENITIES = [
-  { icon: Wifi, label: "Fast Wi-Fi", desc: "Stable connection in every room." },
-  { icon: UtensilsCrossed, label: "Shared kitchen", desc: "Cook anytime, fully equipped." },
-  { icon: Sparkles, label: "Weekly cleaning", desc: "Rooms kept fresh and tidy." },
-  { icon: ShieldCheck, label: "Safe & secure", desc: "Doors and entry you can trust." },
+  { icon: Wifi, label: "Fast Wi-Fi", desc: "Stay connected reliable internet in every room, day and night." },
+  { icon: UtensilsCrossed, label: "Shared Kitchen", desc: "Feel at home cook your own meals anytime in our fully equipped kitchen." },
+  { icon: Sparkles, label: "Weekly Cleaning", desc: "We keep things spotless so you can focus on what matters." },
+  { icon: ShieldCheck, label: "Safe & Secure", desc: "Your peace of mind comes first secure entry, always." },
+  { icon: WashingMachine, label: "Washing Machine", desc: "No more laundry worries washing machine available for everyone." },
+  { icon: Lock, label: "Personal Cupboard", desc: "Your belongings, your space lockable personal cupboard provided." },
+  { icon: HandPlatter, label: "Mess Facility", desc: "On request, 3rd party mess service is available homely meals at your doorstep." },
 ];
 
 const GALLERY = [
@@ -47,17 +55,22 @@ const GALLERY = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rent House — Men's Hostel Rooms & Sharing Options" },
+      { title: "Best Men's Stay Near Infopark Phase 2, Kakkanad, Kochi | Rent House" },
       {
         name: "description",
         content:
-          "Rent House is a comfortable men's hostel with 2, 3 and 4 share rooms. Check availability and enquire instantly on WhatsApp.",
+          "Best men's stay near Infopark Phase 2, Kakkanad, Kochi. Just 500 meters from Infopark Phase 2 & 1.5 km from Phase 1. Affordable 3, 4 & 5 share rooms with Wi-Fi, washing machine & more.",
       },
-      { property: "og:title", content: "Rent House — Men's Hostel Rooms & Sharing Options" },
+      {
+        name: "keywords",
+        content:
+          "best men's stay near infopark phase 2, kakkanad, kochi, men's hostel kakkanad, PG near infopark, affordable stay infopark kochi, rent house kochi",
+      },
+      { property: "og:title", content: "Best Men's Stay Near Infopark Phase 2, Kakkanad, Kochi | Rent House" },
       {
         property: "og:description",
         content:
-          "Comfortable 2, 3 and 4 share rooms for men. Check availability and enquire instantly on WhatsApp.",
+          "Just 500m from Infopark Phase 2! Comfortable 3, 4 & 5 share rooms for men. Enquire on WhatsApp now.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -70,6 +83,7 @@ function Index() {
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [room, setRoom] = useState("3 Share");
+
   const [error, setError] = useState("");
   const [dark, setDark] = useState(
     () =>
@@ -132,13 +146,7 @@ function Index() {
         {/* Header */}
         <header className="sticky top-3 z-40 flex items-center justify-between rounded-2xl bg-surface/70 px-4 py-3 shadow-[0_12px_30px_-16px_rgba(124,109,242,.6)] outline outline-ink/5 backdrop-blur-xl">
           <a href="#top" className="flex items-center gap-2">
-            <div className="grid size-10 place-items-center rounded-2xl bg-surface/80 text-brand shadow-[0_8px_20px_-8px_rgba(124,109,242,.6)] outline outline-ink/5">
-              <span className="font-display text-lg font-bold">R</span>
-            </div>
-            <div>
-              <p className="font-display text-base font-semibold leading-none">Rent House</p>
-              <p className="text-[11px] font-medium text-soft">Men's Hostel</p>
-            </div>
+            <img src="/logo.png" alt="Rentouse" className="h-10 w-auto object-contain" />
           </a>
           <nav className="hidden items-center gap-1 md:flex">
             {NAV_LINKS.map((l) => (
@@ -166,14 +174,14 @@ function Index() {
             >
               {dark ? <Sun className="size-5" /> : <Moon className="size-5" />}
             </button>
-          <button
-            type="button"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            onClick={() => setMenuOpen((v) => !v)}
-            className="grid size-10 place-items-center rounded-xl bg-surface/70 text-ink outline outline-ink/5 md:hidden"
-          >
-            {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-          </button>
+            <button
+              type="button"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              onClick={() => setMenuOpen((v) => !v)}
+              className="grid size-10 place-items-center rounded-xl bg-surface/70 text-ink outline outline-ink/5 md:hidden"
+            >
+              {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+            </button>
           </div>
         </header>
 
@@ -199,21 +207,36 @@ function Index() {
             ● Rooms available now
           </span>
           <h1 className="mt-4 font-display text-[34px] font-semibold leading-[1.05] md:text-[44px]">
-            Find your
+            Best Men's Stay
             <br />
-            new home base
+            Near Infopark Phase 2
           </h1>
+          <p className="mt-2 text-[13px] font-semibold text-brand">
+            Kakkanad, Kochi — Infopark Phase 2 just 500m away · Phase 1 only 1.5 km
+          </p>
           <p className="mt-3 text-[15px] leading-relaxed text-soft">
-            Bright, friendly shared rooms for men in the heart of the city. Move in this week —
-            bring your bags, we'll handle the rest.
+            Your comfort matters to us. Move into bright, friendly shared rooms made just for working professionals and students. Bring your bags we'll take care of the rest.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
-            {["2 Share", "3 Share", "4 Share"].map((t) => (
+            {["3 Share", "4 Share", "5 Share"].map((t) => (
               <span key={t} className="rounded-full bg-surface/80 px-3 py-1.5 font-display text-xs font-semibold">
                 {t}
               </span>
             ))}
           </div>
+
+          {/* Rent sticker */}
+          <div className="mt-5 rounded-2xl border border-brand/20 bg-brand/10 px-4 py-3">
+            <div className="flex items-center gap-2">
+              <IndianRupee className="size-5 text-brand" />
+              <p className="text-sm font-bold text-brand">Starting Rent: ₹______/month per person</p>
+            </div>
+            <div className="mt-2 flex items-center gap-2">
+              <CalendarClock className="size-4 text-accent-teal" />
+              <p className="text-[13px] font-medium text-accent-teal">Daily stay also available at an affordable price!</p>
+            </div>
+          </div>
+
           <a
             href="#contact"
             className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-brand py-4 text-base font-semibold text-primary-foreground shadow-[0_14px_30px_-10px_rgba(124,109,242,.9)] transition-all duration-200 hover:shadow-[0_20px_38px_-10px_rgba(124,109,242,1)]"
@@ -232,13 +255,12 @@ function Index() {
             <span className="text-xs font-semibold text-soft">For men</span>
           </div>
           <p className="mt-2 text-[14px] leading-relaxed text-soft">
-            A calm, community-first men's hostel. Fast Wi-Fi, a shared kitchen, weekly cleaning,
-            and roommates who actually say hi. No hidden fees, no drama.
+            We believe your living space should feel like home not just a room. Rent House is a friendly, community-first men's stay with everything you need to live comfortably. Fast Wi-Fi, a fully equipped shared kitchen, weekly cleaning, washing machine, personal lockable cupboards, and neighbours who actually greet you. No hidden fees, no drama just a place where you can truly relax after a long day.
           </p>
           <div className="mt-4 grid grid-cols-3 gap-2 text-center">
             <div className="rounded-2xl bg-brand/10 py-3">
               <p className="font-display text-lg font-bold text-brand">40+</p>
-              <p className="text-[11px] font-medium text-soft">Residents</p>
+              <p className="text-[11px] font-medium text-soft">Happy Residents</p>
             </div>
             <div className="rounded-2xl bg-accent-teal/10 py-3">
               <p className="font-display text-lg font-bold text-accent-teal">5.0</p>
@@ -246,7 +268,7 @@ function Index() {
             </div>
             <div className="rounded-2xl bg-blush/15 py-3">
               <p className="font-display text-lg font-bold text-blush">24/7</p>
-              <p className="text-[11px] font-medium text-soft">Support</p>
+              <p className="text-[11px] font-medium text-soft">We're Here</p>
             </div>
           </div>
           <div className="mt-4 grid grid-cols-2 gap-2">
@@ -285,15 +307,19 @@ function Index() {
         >
           <h2 className="font-display text-lg font-semibold">Location</h2>
           <p className="mt-1 text-[14px] text-soft">
-            Easy to reach — surrounded by shops, eateries and daily essentials.
+            Perfectly located for Infopark professionals just a short walk to your office. Shops, eateries, and daily essentials are all around you.
           </p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            <span className="rounded-full bg-brand/10 px-3 py-1.5 text-xs font-semibold text-brand">Infopark Phase 2 — 500m</span>
+            <span className="rounded-full bg-accent-teal/10 px-3 py-1.5 text-xs font-semibold text-accent-teal">Infopark Phase 1 — 1.5 km</span>
+          </div>
           <div className="mt-4 flex gap-3 rounded-2xl bg-brand/10 p-3">
             <div className="grid size-11 shrink-0 place-items-center rounded-xl bg-brand text-primary-foreground">
               <MapPin className="size-5" />
             </div>
             <div>
-              <p className="text-sm font-semibold">Rent House — Men's Hostel</p>
-              <p className="text-[12px] text-soft">Tap below for the exact spot on Google Maps</p>
+              <p className="text-sm font-semibold">Rent House — Men's Stay, Kakkanad</p>
+              <p className="text-[12px] text-soft">Tap below to find us on Google Maps</p>
             </div>
           </div>
           <a
@@ -313,7 +339,7 @@ function Index() {
         >
           <h2 className="font-display text-xl font-semibold">Reserve your room</h2>
           <p className="mt-1 text-[14px] text-soft">
-            Tap a preference and we'll send your enquiry to the hostel admin on WhatsApp.
+            Just pick your preference below and we'll connect you directly with the admin on WhatsApp. It's that simple.
           </p>
 
           <form className="mt-4 space-y-4" onSubmit={sendToWhatsApp} noValidate>
@@ -349,18 +375,17 @@ function Index() {
             <div>
               <span className="mb-1.5 block text-xs font-semibold text-soft">Room preference</span>
               <div className="grid grid-cols-3 gap-2" role="radiogroup" aria-label="Room preference">
-                {["2 Share", "3 Share", "4 Share"].map((opt) => (
+                {["3 Share", "4 Share", "5 Share"].map((opt) => (
                   <button
                     key={opt}
                     type="button"
                     role="radio"
                     aria-checked={room === opt}
                     onClick={() => setRoom(opt)}
-                    className={`rounded-2xl border py-3.5 text-center text-sm font-semibold transition ${
-                      room === opt
-                        ? "border-brand bg-brand text-primary-foreground shadow-[0_10px_22px_-8px_rgba(124,109,242,.9)]"
-                        : "border-ink/5 bg-surface/70 text-soft"
-                    }`}
+                    className={`rounded-2xl border py-3.5 text-center text-sm font-semibold transition ${room === opt
+                      ? "border-brand bg-brand text-primary-foreground shadow-[0_10px_22px_-8px_rgba(124,109,242,.9)]"
+                      : "border-ink/5 bg-surface/70 text-soft"
+                      }`}
                   >
                     {opt}
                   </button>
@@ -374,35 +399,39 @@ function Index() {
             >
               <MessageCircle className="size-5" /> Enquire Now
             </button>
-            <p className="text-center text-[12px] font-medium text-soft">
+            <p className="text-center text-[13px] font-medium italic text-soft">
               More than a bed. A space to breathe.
             </p>
           </form>
         </section>
 
         {/* Footer */}
-        <footer className="mt-8 flex items-center justify-between px-1">
-          <p className="font-display text-xs font-semibold">Rent House — Men's Hostel</p>
-          <div className="flex gap-2">
-            <a
-              href={`tel:+${WHATSAPP_NUMBER}`}
-              aria-label="Call the hostel"
-              className="grid size-9 place-items-center rounded-full bg-surface/70 text-ink outline outline-ink/5"
-            >
-              <Phone className="size-4" />
-            </a>
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp the hostel"
-              className="grid size-9 place-items-center rounded-full bg-accent-teal text-primary-foreground"
-            >
-              <MessageCircle className="size-4" />
-            </a>
-            <a href="#top" className="self-center pl-1 text-xs font-medium text-soft">
-              Top ↑
-            </a>
+        <footer className="mt-8 rounded-2xl bg-surface/50 px-4 py-5 outline outline-ink/5 backdrop-blur-xl">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="font-display text-xs font-semibold">By renthouse realtors PVT LTD</p>
+            </div>
+            <div className="flex gap-2">
+              <a
+                href={`tel:+${WHATSAPP_NUMBER}`}
+                aria-label="Call us"
+                className="grid size-9 place-items-center rounded-full bg-surface/70 text-ink outline outline-ink/5"
+              >
+                <Phone className="size-4" />
+              </a>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp us"
+                className="grid size-9 place-items-center rounded-full bg-accent-teal text-primary-foreground"
+              >
+                <MessageCircle className="size-4" />
+              </a>
+              <a href="#top" className="self-center pl-1 text-xs font-medium text-soft">
+                Top ↑
+              </a>
+            </div>
           </div>
         </footer>
       </div>
@@ -412,9 +441,8 @@ function Index() {
         type="button"
         aria-label="Back to top"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={`fixed bottom-5 right-5 z-40 grid size-11 place-items-center rounded-full bg-brand text-primary-foreground shadow-[0_14px_30px_-10px_rgba(124,109,242,.9)] transition-all duration-300 ${
-          showTop ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
-        }`}
+        className={`fixed bottom-5 right-5 z-40 grid size-11 place-items-center rounded-full bg-brand text-primary-foreground shadow-[0_14px_30px_-10px_rgba(124,109,242,.9)] transition-all duration-300 ${showTop ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
+          }`}
       >
         <ArrowUp className="size-5" />
       </button>
