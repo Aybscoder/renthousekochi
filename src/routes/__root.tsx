@@ -77,18 +77,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rent House — Men's Hostel Rooms & Sharing Options" },
+      { title: "Best Men's Stay Near Infopark Phase 2, Kakkanad, Kochi | Rent House" },
       {
         name: "description",
         content:
-          "Rent House is a comfortable men's hostel with 2, 3 and 4 share rooms. Check availability and enquire instantly on WhatsApp.",
+          "Best men's stay near Infopark Phase 2, Kakkanad, Kochi. Just 500 meters from Infopark Phase 2 & 1.5 km from Phase 1. Affordable 3, 4 & 5 share rooms with Wi-Fi, washing machine & more.",
       },
-      { name: "author", content: "Rent House" },
-      { property: "og:title", content: "Rent House — Men's Hostel Rooms & Sharing Options" },
+      { name: "author", content: "renthouse realtors PVT LTD" },
+      {
+        name: "keywords",
+        content:
+          "best men's stay near infopark phase 2, kakkanad, kochi, men's hostel kakkanad, PG near infopark, affordable stay infopark kochi, rent house kochi",
+      },
+      { property: "og:title", content: "Best Men's Stay Near Infopark Phase 2, Kakkanad, Kochi | Rent House" },
       {
         property: "og:description",
         content:
-          "Comfortable 2, 3 and 4 share rooms for men. Check availability and enquire instantly on WhatsApp.",
+          "Just 500m from Infopark Phase 2! Comfortable 3, 4 & 5 share rooms for men. Enquire on WhatsApp now.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -104,7 +109,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
   shellComponent: RootShell,
